@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="utf-8">
+
+     <!-- Circles' head scripts [REQUIRED] -->
+     <circles-start-scripts />
+
+     <script src="/worlds/BEM-O-TREE-002/public/js/planets.js"></script>
+     <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+</head>
+
+<body>
+
+     <!-- this is used to create our enter UI that creates a 2D overlay to capture a user gesture for sound/mic access etc. -->
+     <circles-start-ui />
+
+     <a-scene circles_scene_properties physics="debug:false; gravity:0;" background="color:#FFFFFF;">
+
+          <a-camera position="0 1.4 3" rotation="0 0 0">
+          </a-camera>
+
+
+          <a-assets>
+               <img id="earth_map" src="/worlds/BEM-O-TREE-002/public/assets/2k_earth_daymap.jpg"
+                    crossorigin="anonymous">
+               <img id="mars_map" src="/worlds/BEM-O-TREE-002/public/assets/2k_mars.jpg" crossorigin="anonymous">
+               <img id="mercury_map" src="/worlds/BEM-O-TREE-002/public/assets/2k_mercury.jpg" crossorigin="anonymous">
+               <img id="venus_map" src="/worlds/BEM-O-TREE-002/public/assets/2k_venus.jpg" crossorigin="anonymous">
+               <img id="saturn_map" src="/worlds/BEM-O-TREE-002/public/assets/2k_saturn.jpg" crossorigin="anonymous">
+               <img id="uranus_map" src="/worlds/BEM-O-TREE-002/public/assets/2k_uranus_map.jpg"
+                    crossorigin="anonymous">
+               <img id="neptune_map" src="/worlds/BEM-O-TREE-002/public/assets/2k_neptune.jpg" crossorigin="anonymous">
+               <img id="sun_map" src="/worlds/BEM-O-TREE-002/public/assets/8k_sun.jpg" crossorigin="anonymous">
+               <img id="jupiter_map" src="/worlds/BEM-O-TREE-002/public/assets/2k_jupiter.jpg" crossorigin="anonymous">
+
+               <!-- Circles' built-in assets [REQUIRED] -->
+               <circles-assets />
+
+          </a-assets>
+
+          <!-- Circles' built-in avatar [REQUIRED] -->
+          <circles-manager-avatar />
+
+
+
+
+
+
+          <!--
+
+                    SUN
+
+            -->
+          <a-entity id="sun" position="-38 3.5 -6" geometry="primitive:sphere; radius:9.0;" scale="1 1 1"
+               material="src: #sun_map" ; link="href: sun.html" ;
+               animation="property: rotation; to: 0 360 0; dur: 80000; easing: linear; loop: true;"
+               animation__mouseenter="property: scale; to: 1.5 1.5 1.5; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 1 1 1; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <!--SUN TEXT-->
+          <a-entity text="value:Planet Sun; color: white;" position="-23 5 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Gravity 274 m/s^2; color: white;" position="-23 4 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Radius 696,340 km; color: white;" position="-23 3 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Orbital period 230 million year; color: white;" position="-23 2 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+
+
+
+
+          <!--
+
+                    Mercury
+
+            -->
+          <a-entity id="mercury" position="-20 3.5 -6" geometry="primitive:sphere; radius:0.4;" scale="1 1 1"
+               material="src: #mercury_map" ; link="href: mercury.html" ;
+               animation="property: rotation; to: 0 360 0; dur: 8000; easing: linear; loop: true;"
+               animation__mouseenter="property: scale; to: 1.5 1.5 1.5; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 1 1 1; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <!--Mercury TEXT-->
+          <a-entity text="value:Planet Mercury; color: white;" position="-17 5 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Gravity 3.7 m/s^2; color: white;" position="-17 4 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Radius 2,439 km; color: white;" position="-17 3 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Orbital period 88 days; color: white;" position="-17 2 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+
+          <!--
+
+                    Venus
+
+
+             -->
+          <a-entity id="venus" position="-13 3.5 -6" geometry="primitive:sphere; radius:0.75;" scale="1 1 1"
+               material="src: #venus_map" ; link="href: venus.html" ;
+               animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true;"
+               animation__mouseenter="property: scale; to: 1.5 1.5 1.5; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 1 1 1; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <!--Venus TEXT-->
+          <a-entity text="value:Planet Venus; color: white;" position="-10 5 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Gravity 8.87 m/s^2; color: white;" position="-10 4 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Radius 6,051 km; color: white;" position="-10 3 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Orbital period 225 days; color: white;" position="-10 2 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <!--
+
+                    EARTH
+
+
+             -->
+          <a-entity id="earth" position="-3 3.5 -6" geometry="primitive:sphere; radius:2.0;" scale="1 1 1"
+               material="src: #earth_map" ; link="href: earth.html" ;
+               animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true;"
+               animation__mouseenter="property: scale; to: 1.5 1.5 1.5; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 1 1 1; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <!--EARTH TEXT-->
+          <a-entity text="value:Planet Earth; color: white;" position="2 5 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Gravity 9.807 m/s^2; color: white;" position="2 4 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Radius 6,371 km; color: white;" position="2 3 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Orbital period 365 days; color: white;" position="2 2 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+
+          <!--
+                
+                 MARS
+            
+            -->
+          <a-entity id="mars" position="7 3.5 -6" geometry="primitive:sphere; radius:1.0;" scale="1 1 1"
+               material="src: #mars_map" ; link="href: mars_grav.html" ;
+               animation="property: rotation; to: 0 360 0; dur: 20000; easing: linear; loop: true;"
+               animation__mouseenter="property: scale; to: 1.5 1.5 1.5; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 1 1 1; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <!--MARS text-->
+          <a-entity text="value:Planet Mars; color: white;" position="10 5 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Gravity 3.721 m/s^2; color: white;" position="10 4 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Radius 3,389.5 km; color: white;" position="10 3 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Orbital period 687 days; color: white;" position="10 2 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+
+          <!--
+                
+                 Jupiter
+            
+            -->
+          <a-entity id="Jupiter" position="17 3.5 -6" geometry="primitive:sphere; radius:3.5;" scale="1 1 1"
+               material="src: #jupiter_map" ; link="href: jupiter.html" ;
+               animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true;"
+               animation__mouseenter="property: scale; to: 1.5 1.5 1.5; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 1 1 1; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <!--Jupiter text-->
+          <a-entity text="value:Planet Jupiter; color: white;" position="23 5 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Gravity 24.79 m/s^2; color: white;" position="23 4 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Radius 69,911 km; color: white;" position="23 3 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Orbital period 12 years; color: white;" position="23 2 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <!--
+                
+                 SATURN
+            
+            -->
+          <a-ring rotation="90 25" position="27 3.5 -6" color="#A9A9A9" radius-inner="4" radius-outer="6"
+               depth="80"></a-ring>
+
+          <a-entity id="saturn" position="27 3.5 -6" geometry="primitive:sphere; radius:3.0;" scale="1 1 1"
+               material="src: #saturn_map" ; link="href: saturn.html" ;
+               animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true;"
+               animation__mouseenter="property: scale; to: 1.5 1.5 1.5; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 1 1 1; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <!--SATURN text-->
+          <a-entity text="value:Planet Saturn; color: white;" position="33 5 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Gravity 10.44 m/s^2; color: white;" position="33 4 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Radius 55,232 km; color: white;" position="33 3 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Orbital period 29 years; color: white;" position="33 2 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <!--
+                
+                 Uranus
+            
+            -->
+          <a-entity id="Uranus" position="37 3.5 -6" geometry="primitive:sphere; radius:2.4;" scale="1 1 1"
+               material="src: #uranus_map" ; link="href: uranus.html" ;
+               animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true;"
+               animation__mouseenter="property: scale; to: 1.5 1.5 1.5; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 1 1 1; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <!--Uranus text-->
+          <a-entity text="value:Planet Uranus; color: white;" position="41 5 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Gravity 8.87 m/s^2; color: white;" position="41 4 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Radius 25,362 km; color: white;" position="41 3 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Orbital period 84 years; color: white;" position="41 2 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <!--
+                
+                 Neptune
+            
+            -->
+          <a-entity id="Neptune" position="45 3.5 -6" geometry="primitive:sphere; radius:2.05;" scale="1 1 1"
+               material="src: #neptune_map" ; link="href: neptune.html" ;
+               animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true;"
+               animation__mouseenter="property: scale; to: 1.5 1.5 1.5; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 1 1 1; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <!--Neptune text-->
+          <a-entity text="value:Planet Neptune; color: white;" position="49 5 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Gravity 11.15 m/s^2; color: white;" position="49 4 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Radius 24,622 km; color: white;" position="49 3 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-entity text="value:Orbital period 165 years; color: white;" position="49 2 -3" scale="3 3 3"
+               animation__mouseenter="property: scale; to: 6 6 6; dur: 500; startEvents: mouseenter"
+               animation__mouseleave="property: scale; to: 3 3 3; dur: 500; startEvents: mouseleave;">
+          </a-entity>
+
+          <a-sky color="#000"></a-sky>
+     </a-scene>
+
+     <!-- Circles' end scripts [REQUIRED] -->
+     <circles-end-scripts />
+
+</body>
+
+</html>
