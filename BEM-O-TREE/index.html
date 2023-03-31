@@ -7,7 +7,7 @@
      <!-- Circles' head scripts [REQUIRED] -->
      <circles-start-scripts />
 
-     <script src="/worlds/BEM-O-TREE-002/public/js/planets.js"></script>
+     <script src="/worlds/BEM-O-TREE/public/js/planets.js"></script>
      <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
 </head>
 
@@ -23,17 +23,15 @@
 
 
           <a-assets>
-               <img id="earth_map" src="/worlds/BEM-O-TREE-002/public/assets/2k_earth_daymap.jpg"
-                    crossorigin="anonymous">
-               <img id="mars_map" src="/worlds/BEM-O-TREE-002/public/assets/2k_mars.jpg" crossorigin="anonymous">
-               <img id="mercury_map" src="/worlds/BEM-O-TREE-002/public/assets/2k_mercury.jpg" crossorigin="anonymous">
-               <img id="venus_map" src="/worlds/BEM-O-TREE-002/public/assets/2k_venus.jpg" crossorigin="anonymous">
-               <img id="saturn_map" src="/worlds/BEM-O-TREE-002/public/assets/2k_saturn.jpg" crossorigin="anonymous">
-               <img id="uranus_map" src="/worlds/BEM-O-TREE-002/public/assets/2k_uranus_map.jpg"
-                    crossorigin="anonymous">
-               <img id="neptune_map" src="/worlds/BEM-O-TREE-002/public/assets/2k_neptune.jpg" crossorigin="anonymous">
-               <img id="sun_map" src="/worlds/BEM-O-TREE-002/public/assets/8k_sun.jpg" crossorigin="anonymous">
-               <img id="jupiter_map" src="/worlds/BEM-O-TREE-002/public/assets/2k_jupiter.jpg" crossorigin="anonymous">
+               <img id="earth_map" src="/worlds/BEM-O-TREE/public/assets/2k_earth_daymap.jpg" crossorigin="anonymous">
+               <img id="mars_map" src="/worlds/BEM-O-TREE/public/assets/2k_mars.jpg" crossorigin="anonymous">
+               <img id="mercury_map" src="/worlds/BEM-O-TREE/public/assets/2k_mercury.jpg" crossorigin="anonymous">
+               <img id="venus_map" src="/worlds/BEM-O-TREE/public/assets/2k_venus.jpg" crossorigin="anonymous">
+               <img id="saturn_map" src="/worlds/BEM-O-TREE/public/assets/2k_saturn.jpg" crossorigin="anonymous">
+               <img id="uranus_map" src="/worlds/BEM-O-TREE/public/assets/2k_uranus_map.jpg" crossorigin="anonymous">
+               <img id="neptune_map" src="/worlds/BEM-O-TREE/public/assets/2k_neptune.jpg" crossorigin="anonymous">
+               <img id="sun_map" src="/worlds/BEM-O-TREE/public/assets/8k_sun.jpg" crossorigin="anonymous">
+               <img id="jupiter_map" src="/worlds/BEM-O-TREE/public/assets/2k_jupiter.jpg" crossorigin="anonymous">
 
                <!-- Circles' built-in assets [REQUIRED] -->
                <circles-assets />
@@ -54,9 +52,10 @@
 
             -->
           <a-entity id="sun" position="-38 3.5 -6" geometry="primitive:sphere; radius:9.0;" scale="1 1 1"
-               material="src: #sun_map" ; link="href: sun.html" ;
+               circles-interactive-object="type:highlight" material="src: #sun_map"
+               link="href: /worlds/BEM-O-TREE/public/sun.html"
                animation="property: rotation; to: 0 360 0; dur: 80000; easing: linear; loop: true;"
-               animation__mouseenter="property: scale; to: 1.5 1.5 1.5; dur: 500; startEvents: mouseenter"
+               animation__mouseenter="property: scale; to: 1.5 1.5 1.5; dur: 500; startEvents: mouseenter;"
                animation__mouseleave="property: scale; to: 1 1 1; dur: 500; startEvents: mouseleave;">
           </a-entity>
 
@@ -91,7 +90,8 @@
 
             -->
           <a-entity id="mercury" position="-20 3.5 -6" geometry="primitive:sphere; radius:0.4;" scale="1 1 1"
-               material="src: #mercury_map" ; link="href: mercury.html" ;
+               circles-interactive-object="type:highlight" material="src: #mercury_map" ;
+               link="href: /worlds/BEM-O-TREE/public/mercury.html" ;
                animation="property: rotation; to: 0 360 0; dur: 8000; easing: linear; loop: true;"
                animation__mouseenter="property: scale; to: 1.5 1.5 1.5; dur: 500; startEvents: mouseenter"
                animation__mouseleave="property: scale; to: 1 1 1; dur: 500; startEvents: mouseleave;">
@@ -126,7 +126,8 @@
 
              -->
           <a-entity id="venus" position="-13 3.5 -6" geometry="primitive:sphere; radius:0.75;" scale="1 1 1"
-               material="src: #venus_map" ; link="href: venus.html" ;
+               circles-interactive-object="type:highlight" material="src: #venus_map" ;
+               link="href: /worlds/BEM-O-TREE/public/venus.html" ;
                animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true;"
                animation__mouseenter="property: scale; to: 1.5 1.5 1.5; dur: 500; startEvents: mouseenter"
                animation__mouseleave="property: scale; to: 1 1 1; dur: 500; startEvents: mouseleave;">
@@ -160,7 +161,8 @@
 
              -->
           <a-entity id="earth" position="-3 3.5 -6" geometry="primitive:sphere; radius:2.0;" scale="1 1 1"
-               material="src: #earth_map" ; link="href: earth.html" ;
+               circles-interactive-object="type:highlight" material="src: #earth_map" ;
+               link="href: /worlds/BEM-O-TREE/public/earth.html" ;
                animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true;"
                animation__mouseenter="property: scale; to: 1.5 1.5 1.5; dur: 500; startEvents: mouseenter"
                animation__mouseleave="property: scale; to: 1 1 1; dur: 500; startEvents: mouseleave;">
@@ -194,7 +196,8 @@
             
             -->
           <a-entity id="mars" position="7 3.5 -6" geometry="primitive:sphere; radius:1.0;" scale="1 1 1"
-               material="src: #mars_map" ; link="href: mars_grav.html" ;
+               circles-interactive-object="type:highlight" material="src: #mars_map" ;
+               link="href: /worlds/BEM-O-TREE/public/mars_grav.html" ;
                animation="property: rotation; to: 0 360 0; dur: 20000; easing: linear; loop: true;"
                animation__mouseenter="property: scale; to: 1.5 1.5 1.5; dur: 500; startEvents: mouseenter"
                animation__mouseleave="property: scale; to: 1 1 1; dur: 500; startEvents: mouseleave;">
@@ -228,7 +231,8 @@
             
             -->
           <a-entity id="Jupiter" position="17 3.5 -6" geometry="primitive:sphere; radius:3.5;" scale="1 1 1"
-               material="src: #jupiter_map" ; link="href: jupiter.html" ;
+               circles-interactive-object="type:highlight" material="src: #jupiter_map" ;
+               link="href: /worlds/BEM-O-TREE/public/jupiter.html" ;
                animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true;"
                animation__mouseenter="property: scale; to: 1.5 1.5 1.5; dur: 500; startEvents: mouseenter"
                animation__mouseleave="property: scale; to: 1 1 1; dur: 500; startEvents: mouseleave;">
@@ -264,7 +268,8 @@
                depth="80"></a-ring>
 
           <a-entity id="saturn" position="27 3.5 -6" geometry="primitive:sphere; radius:3.0;" scale="1 1 1"
-               material="src: #saturn_map" ; link="href: saturn.html" ;
+               circles-interactive-object="type:highlight" material="src: #saturn_map" ;
+               link="href: /worlds/BEM-O-TREE/public/saturn.html" ;
                animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true;"
                animation__mouseenter="property: scale; to: 1.5 1.5 1.5; dur: 500; startEvents: mouseenter"
                animation__mouseleave="property: scale; to: 1 1 1; dur: 500; startEvents: mouseleave;">
@@ -297,7 +302,8 @@
             
             -->
           <a-entity id="Uranus" position="37 3.5 -6" geometry="primitive:sphere; radius:2.4;" scale="1 1 1"
-               material="src: #uranus_map" ; link="href: uranus.html" ;
+               circles-interactive-object="type:highlight" material="src: #uranus_map" ;
+               link="href: /worlds/BEM-O-TREE/public/uranus.html" ;
                animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true;"
                animation__mouseenter="property: scale; to: 1.5 1.5 1.5; dur: 500; startEvents: mouseenter"
                animation__mouseleave="property: scale; to: 1 1 1; dur: 500; startEvents: mouseleave;">
@@ -330,7 +336,8 @@
             
             -->
           <a-entity id="Neptune" position="45 3.5 -6" geometry="primitive:sphere; radius:2.05;" scale="1 1 1"
-               material="src: #neptune_map" ; link="href: neptune.html" ;
+               circles-interactive-object="type:highlight" material="src: #neptune_map" ;
+               link="href: /worlds/BEM-O-TREE/public/neptune.html" ;
                animation="property: rotation; to: 0 360 0; dur: 10000; easing: linear; loop: true;"
                animation__mouseenter="property: scale; to: 1.5 1.5 1.5; dur: 500; startEvents: mouseenter"
                animation__mouseleave="property: scale; to: 1 1 1; dur: 500; startEvents: mouseleave;">
